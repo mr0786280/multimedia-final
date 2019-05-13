@@ -1,0 +1,266 @@
+/* CSS Document */
+
+
+header {
+
+         padding: 20px;
+         margin: 10px;
+}
+
+header, #footer {
+
+         background-color: #754DB5;
+         font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+         text-align: center;
+}    
+
+h1 {
+
+        font-size: 25px;
+		animation: fontbulger 2s linear infinite;
+}
+
+
+body {
+        
+         background-color: #daccff;
+         color: white;
+         padding: 7px;
+         margin: 0px;
+         border: #9370DB;
+        
+}
+
+html, body {
+	
+	margin: 0; 
+	height: 100%; 
+	overflow: hidden
+}
+
+
+
+h3 {
+	
+         font-size: 30px;
+         font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+		
+}
+	
+section{
+
+        font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+        font-size: 16px;
+        padding: 2%;
+        width: 40%;
+        text-align: left;
+        margin: 0;
+	 	top: 250px;
+		
+        
+}
+
+img {
+	
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	bottom: 250px;
+	transition: all 1s ease-in-out;
+	right: 200px;
+	animation: hang 2s linear infinite;
+}
+
+#footer { 
+		position: absolute;
+        text-align: center;
+        width: 100%;
+        height: 5rem;
+		bottom: 0;
+		font-size: 25px;
+
+}
+
+/*Below here is the heart stuff*/
+
+.center {
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 100px;
+	background: #262626;
+	border: 5px solid #FFF;
+	border-radius:  50%;
+	box-shadow: 45px 45px 45px rgba(0,0,0 .8);
+	z-index: 1;
+	overflow: hidden;
+}
+
+.center:before {
+	
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -50%;
+	width: 100%;
+	height: 100%;
+	background: rbga(0,0,0,.3);
+}
+
+.heart {
+	
+	position: relative;
+	width:  100px;
+	height: 100px;
+	background: #7600BB;
+	transform: rotate(45deg) translate(10px, 10px);
+	animation: animate 1s linear infinite;
+	
+}
+
+.heart:before {
+	
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: #7600BB;
+	position: absolute;
+	top: -50%;
+	left: 0;
+	border-radius: 50%;
+}
+
+.heart:after {
+	
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: #7600BB;
+	position: absolute;
+	bottom: 0;
+	right: 50%;
+	border-radius: 50%;
+}
+
+
+
+/*Below here is the cursor stuff*/
+
+	
+.pointer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 40px;
+	height: 40px;
+	background: #A98AD0;
+	border: 1px solid #BE5DFF;
+	border-radius: 50%;
+	pointer-events: none;
+	box-sizing: border-box;
+	transition: 0.5s;
+}
+
+
+.pointer1 {
+	transition: 0.05s;
+}
+
+.pointer2 {
+	transition: 0.1s;
+}
+
+.pointer3 {
+	transition: 0.15s;
+}
+
+.pointer4 {
+	transition: 0.2s;
+}
+
+.pointer5 {
+	transition: 0.20s;
+}
+
+
+/*Below here is animations*/
+
+@keyframes animate {
+	
+	0% {
+		
+		transform: rotate(45deg) translate(10px, 10px) scale(1);
+	}
+	
+	25% {
+		
+		transform: rotate(45deg) translate(10px, 10px) scale(1);
+	}
+	
+	30% {
+		
+		transform: rotate(45deg) translate(10px, 10px) scale(1.4);
+	}
+	
+	50% {
+		
+		transform: rotate(45deg) translate(10px, 10px) scale(1.2);
+	}
+	
+	70% {
+		
+		transform: rotate(45deg) translate(10px, 10px) scale(1.4);
+	}
+	
+	90% {
+		
+		transform: rotate(45deg) translate(10px, 10px) scale(1);
+	}
+	
+	100% {
+		
+		transform: rotate(45deg) translate(10px, 10px) scale(1);
+	}
+	
+}
+
+
+
+@keyframes hang {
+	
+  0%  {
+    transform: rotate(-60deg)
+  }
+  
+  
+  50% {
+    transform: rotate(30deg);
+    
+  }
+  
+  
+  100% {
+    transform: rotate(-60deg);
+    
+  }
+
+	
+}
+
+@keyframes fontbulger {
+  0% {
+    font-size: 25px;
+	  
+  }
+  30% {
+    font-size: 30px;
+	  
+  }
+  100% {
+    font-size: 25px;
+	  
+  }
+}
